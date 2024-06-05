@@ -1,1 +1,0 @@
-docker pull unball/firasim:latest
