@@ -5,6 +5,8 @@ if [ "$#" -ne 2 ]; then
     exit 1  # não há argumentos
 fi
 
+xhost +local:docker
+
 docker run --name referee -it --rm \
   -e DISPLAY  \
   -v /tmp/.X11-unix:/tmp/.X11-unix --user="$(id --user):$(id --group)" \
